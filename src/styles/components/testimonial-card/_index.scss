@@ -1,0 +1,92 @@
+.testimonial-card {
+  // private css custom properties
+  --_testimonial-card-bg-color: var(
+    --testimonial-card-bg-color,
+    var(--clr-white)
+  );
+  --_testimonial-card-font-color-h: var(--testimonial-card-font-color-h);
+  --_testimonial-card-font-color-s: var(--testimonial-card-font-color-s);
+  --_testimonial-card-font-color-l: var(--testimonial-card-font-color-l);
+  --_testimonial-card-font-color-hsl: hsl(
+    var(--_testimonial-card-font-color-h),
+    var(--_testimonial-card-font-color-s),
+    var(--_testimonial-card-font-color-l)
+  );
+  --_testimonial-card-font-color: var(
+    --_testimonial-card-font-color-hsl,
+    inherit
+  );
+
+  // structure
+  display: block;
+  border-radius: 0.5rem;
+  padding: 2em;
+
+  // skin
+  color: var(--_testimonial-card-font-color);
+  background-color: var(--_testimonial-card-bg-color);
+}
+
+.testimonial-card:first-child {
+  background-image: url('../images/bg-pattern-quotation.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+// BLOCK MODIFIERS
+// BLOCK MODIFIERS: THEME
+.testimonial-card_theme_moderate-violet {
+  --testimonial-card-bg-color: var(--clr-moderate-violet);
+  --testimonial-card-font-color-h: 210;
+  --testimonial-card-font-color-s: 46%;
+  --testimonial-card-font-color-l: 95%;
+}
+
+.testimonial-card_theme_very-dark-grayish-blue {
+  --testimonial-card-bg-color: var(--clr-very-dark-grayish-blue);
+  --testimonial-card-font-color-h: 210;
+  --testimonial-card-font-color-s: 46%;
+  --testimonial-card-font-color-l: 95%;
+}
+
+.testimonial-card_theme_white {
+  --testimonial-card-bg-color: var(--clr-white);
+  --testimonial-card-font-color-h: 217;
+  --testimonial-card-font-color-s: 19%;
+  --testimonial-card-font-color-l: 35%;
+}
+
+.testimonial-card_theme_very-dark-blackish-blue {
+  --testimonial-card-bg-color: var(--clr-very-dark-blackish-blue);
+  --testimonial-card-font-color-h: 210;
+  --testimonial-card-font-color-s: 46%;
+  --testimonial-card-font-color-l: 95%;
+}
+
+// BLOCK ELEMENT
+// BLOCK ELEMENT: TESTIMONIAL-TITLE
+.testimonial-card__testimonial-title {
+  // private css custom properties
+  --_testimonial-card__testimonial-title-font-color-hsl: hsl(
+    var(--_testimonial-card-font-color-h),
+    var(--_testimonial-card-font-color-s),
+    calc(var(--_testimonial-card-font-color-l) * 1.1)
+  );
+
+  --_testimonial-card__testimonial-title-font-color: var(
+    --_testimonial-card__testimonial-title-font-color-hsl,
+    inherit
+  );
+
+  // structure
+  font-size: clamp(1.5em, calc(1.7vw + 0.1em), 2em);
+  display: block;
+
+  // skin
+  font-weight: 600;
+  color: var(--_testimonial-card__testimonial-title-font-color);
+}
+
+.testimonial-card__testimonial-detail {
+  font-size: clamp(1.2em, calc(1.4vw + 0.1em), 1.6em);
+}

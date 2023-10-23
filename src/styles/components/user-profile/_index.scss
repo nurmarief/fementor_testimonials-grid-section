@@ -1,0 +1,74 @@
+.user-profile {
+  // private properties
+  --_user-profile-font-color-h: var(--user-profile-font-color-h);
+  --_user-profile-font-color-s: var(--user-profile-font-color-s);
+  --_user-profile-font-color-l: var(--user-profile-font-color-l);
+
+  --_user-profile-font-color-hsl: hsl(
+    var(--_user-profile-font-color-h),
+    var(--_user-profile-font-color-s),
+    var(--_user-profile-font-color-l)
+  );
+
+  --_user-profile-font-color: var(--_user-profile-font-color-hsl, inherit);
+
+  // structure
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+
+  // skin
+  color: var(--_user-profile-font-color);
+}
+
+.user-profile__avatar {
+  // structure
+  display: block;
+  border-radius: 100%;
+  width: 3em;
+  aspect-ratio: 1 / 1;
+}
+
+.user-profile__user-info-container {
+  // structure
+  display: block;
+  font-size: 1em;
+}
+
+.user-profile__username {
+  // private custom properties;
+  --_user-profile__username-font-color-hsl: hsl(
+    var(--_user-profile-font-color-h),
+    var(--_user-profile-font-color-s),
+    calc(var(--_user-profile-font-color-l) * 1.1)
+  );
+
+  --_user-profile__username-font-color: var(
+    --_user-profile__username-hsl,
+    inherit
+  );
+
+  // structure
+  font-size: 1.1em;
+  display: block;
+  margin: 0;
+
+  // skin
+  font-weight: 600;
+  color: var(--_user-profile__username-font-color, inherit);
+}
+
+.user-profile__verified-graduate {
+  // structure
+  font-size: 0.9em;
+  display: block;
+  margin: 0;
+
+  // skin
+  color: hsl(
+    var(--_user-profile-font-color-h),
+    var(--_user-profile-font-color-s),
+    calc(var(--_user-profile-font-color-l) * 0.9)
+  );
+}
