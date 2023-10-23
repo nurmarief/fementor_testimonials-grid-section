@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktestimonials_grid_section=self.webpackChunktestimonials_grid_section||[]).push([[179],{680:(s,p,e)=>{e.p,e.p,e.p,e.p,e.p,e.p,e.p}},s=>{s(s.s=680)}]);
